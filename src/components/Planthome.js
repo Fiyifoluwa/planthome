@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link, animateScroll as scroll } from "react-scroll";
 import Navbar from "./Navbar";
 
 export default class planthome extends Component {
