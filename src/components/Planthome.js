@@ -1,7 +1,17 @@
 import React, { Component } from "react";
 import Navbar from "./Navbar";
+import { animateScroll as scroll } from "react-scroll";
 
 export default class planthome extends Component {
+  onClick = (e) => {
+    e.preventDefault();
+    console.log("onclick..");
+  };
+
+  scrollToTop = () => {
+    scroll.scrollToTop();
+  };
+
   render() {
     return (
       <div>
@@ -9,7 +19,12 @@ export default class planthome extends Component {
         <Navbar />
 
         {/* <!-- back to top --> */}
-        <a href="#" id="scroll" style={{ display: "none" }}>
+        <a
+          href
+          onClick={this.scrollToTop}
+          id="scroll"
+          style={{ display: "none" }}
+        >
           <span></span>
         </a>
 
@@ -30,7 +45,9 @@ export default class planthome extends Component {
                   Brighten the colors of your home with the best quality plants
                   of various types
                 </p>
-                <a href="#">Shop Plants Now</a>
+                <a href onClick={this.onClick}>
+                  Shop Plants Now
+                </a>
               </div>
 
               <div className="header-img">
@@ -51,7 +68,7 @@ export default class planthome extends Component {
                 <div className="coll-img">
                   <img src="./Images/coll1.png" alt="valentine collection" />
                   <p>
-                    Valentine Collection <img src="./Images/arrow.svg" />
+                    Valentine Collection <img src="./Images/arrow.svg" alt="" />
                   </p>
                 </div>
                 <div className="coll-img">
@@ -93,7 +110,7 @@ export default class planthome extends Component {
                     <p>Plant Parent</p>
                     <p>$90</p>
                   </div>
-                  <a href="#" className="opt">
+                  <a href onClick={this.onClick} className="opt">
                     more options
                   </a>
                 </div>
@@ -103,7 +120,7 @@ export default class planthome extends Component {
                     <p>Monstera Deliciosa</p>
                     <p>$30 - 70</p>
                   </div>
-                  <a href="#" className="opt">
+                  <a href onClick={this.onClick} className="opt">
                     more options
                   </a>
                 </div>
@@ -131,7 +148,9 @@ export default class planthome extends Component {
                     thrive, these will grow even in low light conditions.
                     Although they will grow taller with more light.
                   </p>
-                  <a href="#">Buy Now</a>
+                  <a href onClick={this.onClick}>
+                    Buy Now
+                  </a>
                 </div>
                 <div className="feat-group">
                   <img className="vector" src="./Images/Vector.png" alt="" />
@@ -197,30 +216,46 @@ export default class planthome extends Component {
               <div className="footer-items">
                 <ul>
                   <li>
-                    <a href="#">About Us</a>
+                    <a href onClick={this.onClick}>
+                      About Us
+                    </a>
                   </li>
                   <li>
-                    <a href="#">Careers</a>
+                    <a href onClick={this.onClick}>
+                      Careers
+                    </a>
                   </li>
                   <li>
-                    <a href="#">Contact Us</a>
+                    <a href onClick={this.onClick}>
+                      Contact Us
+                    </a>
                   </li>
                   <li>
-                    <a href="#">Location</a>
+                    <a href onClick={this.onClick}>
+                      Location
+                    </a>
                   </li>
                 </ul>
                 <ul>
                   <li>
-                    <a href="#">Subscription</a>
+                    <a href onClick={this.onClick}>
+                      Subscription
+                    </a>
                   </li>
                   <li>
-                    <a href="#">Frequently Asked Questions</a>
+                    <a href onClick={this.onClick}>
+                      Frequently Asked Questions
+                    </a>
                   </li>
                   <li>
-                    <a href="#">Careers</a>
+                    <a href onClick={this.onClick}>
+                      Careers
+                    </a>
                   </li>
                   <li>
-                    <a href="#">Accessibility</a>
+                    <a href onClick={this.onClick}>
+                      Accessibility
+                    </a>
                   </li>
                 </ul>
               </div>
